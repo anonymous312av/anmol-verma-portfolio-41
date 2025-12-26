@@ -81,23 +81,25 @@ const ContactSection: React.FC = () => {
                 </div>
               </a>
             </div>
-            <div className="flex justify-center">
-              <a
-                href="/resume/Anmol_Verma_Resume.pdf"
-                download="Anmol_Verma_Resume.pdf"
-                className="card-base hover-lift flex items-center gap-4 group border-accent/30 glow"
-              >
-                <div className="p-3 rounded-lg bg-accent text-accent-foreground">
-                  <Download size={24} />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Resume</p>
-                  <p className="font-medium text-foreground">Download Resume (PDF)</p>
-                </div>
-              </a>
-              </div>
           </AnimatedSection>
         </div>
+        <AnimatedSection animation="fade-up" delay={300}>
+          <div className="flex justify-center mt-8">
+            <a
+              href="/resume/Anmol_Verma_Resume.pdf"
+              download="Anmol_Verma_Resume.pdf"
+              className="card-base hover-lift flex items-center gap-4 group border-accent/30 glow w-full max-w-sm"
+            >
+              <div className="p-3 rounded-lg bg-accent text-accent-foreground">
+                <Download size={24} />
+              </div>
+              <div>
+                <p className="text-sm text-muted-foreground">Resume</p>
+                <p className="font-medium text-foreground">Download Resume (PDF)</p>
+              </div>
+            </a>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );
