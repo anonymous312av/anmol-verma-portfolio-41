@@ -80,7 +80,7 @@ const ContactSection: React.FC = () => {
                   <p className="font-medium text-foreground">View Projects on GitHub</p>
                 </div>
               </a>
-
+              <div className="flex justify-center">
               <a
                 href="/resume/Anmol_Verma_Resume.pdf"
                 download="Anmol_Verma_Resume.pdf"
@@ -94,6 +94,7 @@ const ContactSection: React.FC = () => {
                   <p className="font-medium text-foreground">Download Resume (PDF)</p>
                 </div>
               </a>
+              </div>
             </div>
           </AnimatedSection>
         </div>
