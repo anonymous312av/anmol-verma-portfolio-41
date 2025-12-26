@@ -189,6 +189,18 @@
   .glow {
     box-shadow: var(--shadow-glow);
   }
-  
+  html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
 
 }
