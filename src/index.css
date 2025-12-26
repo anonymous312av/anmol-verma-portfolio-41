@@ -7,11 +7,11 @@
 @layer base {
   :root {
     /* Dark theme based on #13161f */
-    --background: 225 18% 10%;
-    --foreground: 210 40% 98%;
+    --background: 210 20% 98%;
+    --foreground: 210 20% 10%;
 
-    --card: 225 20% 13%;
-    --card-foreground: 210 40% 98%;
+    --card: 210 20% 95%;
+    --card-foreground: 210 20% 10%;
 
     --popover: 225 20% 13%;
     --popover-foreground: 210 40% 98%;
@@ -25,8 +25,8 @@
     --muted: 225 15% 18%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 211 100% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 245 80% 60%;
+    --accent-foreground: 210 20% 98%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 210 40% 98%;
@@ -38,9 +38,9 @@
     --radius: 0.5rem;
 
     /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(211 100% 55%) 0%, hsl(225 80% 65%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(245 80% 60%) 0%, hsl(210 20% 98%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(225 18% 10%) 0%, hsl(225 20% 8%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(225 20% 14%) 0%, hsl(225 20% 11%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(210 20% 95%) 0%, hsl(210 20% 90%) 100%);
     --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.3);
     --shadow-hover: 0 12px 40px -8px hsl(211 100% 55% / 0.2);
     --shadow-glow: 0 0 30px hsl(211 100% 55% / 0.15);
