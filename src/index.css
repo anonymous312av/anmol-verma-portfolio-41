@@ -5,47 +5,50 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    /* Dark theme based on #13161f */
-    --background: 210 20% 98%;
-    --foreground: 210 20% 10%;
+    :root {
+    /* Charcoal black background and white text */
+    --background: 210 10% 8%;      /* Dark charcoal black */
+    --foreground: 0 0% 100%;       /* Pure white text */
 
-    --card: 210 20% 95%;
-    --card-foreground: 210 20% 10%;
+    --card: 210 10% 12%;            /* Slightly lighter than background */
+    --card-foreground: 0 0% 100%;   /* White text inside cards */
 
-    --popover: 225 20% 13%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 210 10% 15%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 225 18% 10%;
+    --primary: 211 100% 55%;        /* Keep your blue button color */
+    --primary-foreground: 0 0% 100%;/* White text on blue button */
 
-    --secondary: 225 15% 18%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 12% 18%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 225 15% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 210 12% 20%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 245 80% 60%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 211 100% 55%;         /* Blue accents remain */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 50%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 225 15% 20%;
-    --input: 225 15% 20%;
+    --border: 210 15% 20%;
+    --input: 210 15% 20%;
     --ring: 211 100% 55%;
 
     --radius: 0.5rem;
 
-    /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(245 80% 60%) 0%, hsl(210 20% 98%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(225 18% 10%) 0%, hsl(225 20% 8%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(210 20% 95%) 0%, hsl(210 20% 90%) 100%);
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(211 100% 55%) 0%, hsl(0 0% 8%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(210 10% 8%) 0%, hsl(210 10% 7%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(210 10% 12%) 0%, hsl(210 10% 10%) 100%);
+    
+    /* Shadows and transitions remain same */
     --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.3);
     --shadow-hover: 0 12px 40px -8px hsl(211 100% 55% / 0.2);
     --shadow-glow: 0 0 30px hsl(211 100% 55% / 0.15);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
 }
 
 @layer base {
