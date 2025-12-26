@@ -4,10 +4,13 @@ import { Cog, Cpu, Lightbulb } from 'lucide-react';
 
 const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="bg-muted/30">
-      <div className="section-container">
+    <section id="about" className="relative">
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent pointer-events-none" />
+      
+      <div className="section-container relative z-10">
         <AnimatedSection animation="slide-left">
-          <p className="text-accent font-medium tracking-wide uppercase text-sm mb-2">
+          <p className="text-accent font-medium tracking-widest uppercase text-sm mb-2">
             About Me
           </p>
           <h2 className="section-title">Driven by Curiosity, Built on Precision</h2>
@@ -34,7 +37,7 @@ const AboutSection: React.FC = () => {
             <div className="space-y-6">
               <div className="card-base hover-lift">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-accent/10 text-accent">
+                  <div className="p-3 rounded-lg bg-accent/20 text-accent">
                     <Cog size={24} />
                   </div>
                   <div>
@@ -48,7 +51,7 @@ const AboutSection: React.FC = () => {
 
               <div className="card-base hover-lift">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-accent/10 text-accent">
+                  <div className="p-3 rounded-lg bg-accent/20 text-accent">
                     <Cpu size={24} />
                   </div>
                   <div>
@@ -62,7 +65,7 @@ const AboutSection: React.FC = () => {
 
               <div className="card-base hover-lift">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-accent/10 text-accent">
+                  <div className="p-3 rounded-lg bg-accent/20 text-accent">
                     <Lightbulb size={24} />
                   </div>
                   <div>

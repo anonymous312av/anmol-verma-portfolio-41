@@ -12,13 +12,14 @@ const HeroSection: React.FC = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--accent)/0.05)_0%,transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(var(--primary)/0.03)_0%,transparent_50%)]" />
+      {/* Gradient background effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,hsl(var(--accent)/0.15)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,hsl(225_80%_40%/0.1)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,hsl(var(--accent)/0.08)_0%,transparent_40%)]" />
       
       <div className="section-container text-center relative z-10 pt-16">
         <AnimatedSection animation="fade" delay={0}>
-          <p className="text-accent font-medium tracking-wide uppercase text-sm mb-4">
+          <p className="text-accent font-medium tracking-widest uppercase text-sm mb-4">
             Mechanical Engineering Undergraduate
           </p>
         </AnimatedSection>
@@ -62,7 +63,7 @@ const HeroSection: React.FC = () => {
           <div className="flex items-center justify-center gap-6 mb-16">
             <a
               href="mailto:anmolvermahere@gmail.com"
-              className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+              className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
               aria-label="Email"
             >
               <Mail size={20} />
@@ -71,7 +72,7 @@ const HeroSection: React.FC = () => {
               href="https://linkedin.com/in/anmolverma"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+              className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
@@ -80,7 +81,7 @@ const HeroSection: React.FC = () => {
               href="https://github.com/anmolverma"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+              className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
               aria-label="GitHub"
             >
               <Github size={20} />
@@ -91,7 +92,7 @@ const HeroSection: React.FC = () => {
         <AnimatedSection animation="fade" delay={600}>
           <button
             onClick={handleScrollToAbout}
-            className="animate-bounce p-2 text-muted-foreground hover:text-foreground transition-colors"
+            className="animate-bounce p-2 text-muted-foreground hover:text-accent transition-colors"
             aria-label="Scroll to about section"
           >
             <ArrowDown size={28} />

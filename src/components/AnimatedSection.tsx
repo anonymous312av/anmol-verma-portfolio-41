@@ -15,13 +15,13 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   animation = 'fade',
   delay = 0,
 }) => {
-  const { ref, isVisible } = useScrollAnimation({ threshold: 0.15 });
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
 
-  const animationClasses = {
-    fade: 'fade-in',
-    'slide-left': 'slide-from-left',
-    'slide-right': 'slide-from-right',
-    'slide-up': 'slide-from-bottom',
+  const hiddenClasses = {
+    fade: 'hidden-fade',
+    'slide-left': 'hidden-left',
+    'slide-right': 'hidden-right',
+    'slide-up': 'hidden-bottom',
   };
 
   return (
@@ -29,8 +29,7 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
       ref={ref}
       className={cn(
         'animate-on-scroll',
-        animationClasses[animation],
-        isVisible && 'visible',
+        isVisible ? 'visible' : hiddenClasses[animation],
         className
       )}
       style={{ transitionDelay: `${delay}ms` }}

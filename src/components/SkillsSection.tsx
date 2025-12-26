@@ -31,10 +31,12 @@ const skillCategories: SkillCategory[] = [
 
 const SkillsSection: React.FC = () => {
   return (
-    <section id="skills">
-      <div className="section-container">
+    <section id="skills" className="relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-accent/[0.02] via-transparent to-accent/[0.02] pointer-events-none" />
+      
+      <div className="section-container relative z-10">
         <AnimatedSection animation="slide-right">
-          <p className="text-accent font-medium tracking-wide uppercase text-sm mb-2">
+          <p className="text-accent font-medium tracking-widest uppercase text-sm mb-2">
             Technical Skills
           </p>
           <h2 className="section-title">Tools & Technologies</h2>
