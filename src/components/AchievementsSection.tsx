@@ -4,7 +4,8 @@ import { Trophy, Award, Star } from 'lucide-react';
 
 interface Achievement {
   title: string;
-  event: string;
+  eventLabel: string;
+  eventHref?: string;
   organizer: string;
   icon: 'trophy' | 'award' | 'star';
 }
@@ -12,31 +13,36 @@ interface Achievement {
 const achievements: Achievement[] = [
   {
     title: 'Project Exhibition Winner (Team Leader)',
-    event: "TECHNIKA'25",
     organizer: 'HBTU Kanpur',
+    eventLabel: "TECHNIKA'25",
+    eventHref: 'https://www.instagram.com/p/DJJ1JoEou70/?igsh=MW8zNmEzbXpkMXhhaQ==',
     icon: 'trophy',
   },
   {
     title: 'SolidWorks Design Challenge Winner',
-    event: 'CAD Challenge 2.0',
+    eventLabel: 'CAD Challenge 2.0',
+    eventHref: 'https://www.instagram.com/p/DJsntz_T9qu/?igsh=MWsybTd6dXdqZmRueQ==',
     organizer: 'Mechanical Design & Analysis Club',
     icon: 'trophy',
   },
   {
     title: 'SimulaThon Winner',
-    event: "RoboMania'24",
+    eventLabel: "RoboMania'24",
+    eventHref: 'https://www.instagram.com/p/C8SI7k8P8Bd/?igsh=eGRzc3NidDNmbWUw',
     organizer: 'IoTVerse Club',
     icon: 'award',
   },
   {
     title: 'IoT Innovation Challenge Runner-Up',
-    event: "Hackfest'23",
+    eventLabel: "Hackfest'23",
+    eventHref: 'https://www.instagram.com/p/C1fC1I_NQI0/?img_index=5&igsh=MTMzYzdrc291NDF5Yg==',
     organizer: 'SDC & IoTVerse Club',
     icon: 'star',
   },
   {
     title: 'AutoCAD Design Challenge Winner',
-    event: 'CAD Challenge 1.0',
+    eventLabel: 'CAD Challenge 1.0',
+    eventHref: 'https://www.instagram.com/p/C1Pq94avzpF/?igsh=MXQ1Z2R0bWduZ2V0OQ==',
     organizer: 'Mechanical Design & Analysis Club',
     icon: 'trophy',
   },
@@ -73,24 +79,31 @@ const AchievementsSection: React.FC = () => {
               animation={index % 2 === 0 ? 'slide-left' : 'slide-right'}
               delay={index * 80}
             >
-              <div className="card-base hover-lift h-full">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-accent/10 text-accent flex-shrink-0">
-                    <IconComponent type={achievement.icon} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">
-                      {achievement.title}
-                    </h3>
-                    <p className="text-accent text-sm font-medium">
-                      {achievement.event}
-                    </p>
-                    <p className="text-muted-foreground text-sm mt-1">
-                      {achievement.organizer}
-                    </p>
+              <a
+                href={achievement.eventHref ?? '#'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="card-base hover-lift h-full">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-lg bg-accent/10 text-accent flex-shrink-0">
+                      <IconComponent type={achievement.icon} />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-foreground mb-1">
+                        {achievement.title}
+                      </h3>
+                      <p className="text-accent text-sm font-medium">
+                        <span>{achievement.eventLabel}</span>
+                      </p>
+                      <p className="text-muted-foreground text-sm mt-1">
+                        {achievement.organizer}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </AnimatedSection>
           ))}
         </div>
@@ -103,8 +116,8 @@ const AchievementsSection: React.FC = () => {
             <p className="text-muted-foreground">
               Attended and conducted various workshops and training sessions across domains including 
               IoT, CAD/CAE, and automation as a volunteer and coordinator over 2.5 years in 
-              <span className="text-accent font-medium"> IoTVerse Club</span> and 
-              <span className="text-accent font-medium"> MDAC</span>, REC Banda.
+              <span className="text-accent font-medium"> <a target="_blank"  rel="noopener noreferrer" href="https://www.instagram.com/iotverse_club?igsh=MTV0NG13cjl2empieQ==">IoTVerse Club</a></span> and 
+              <span className="text-accent font-medium"> <a target="_blank"  rel="noopener noreferrer" href="https://www.instagram.com/mdac_club?igsh=YXIzcTQwNnF4NHdz">MDAC</a></span>, REC Banda.
             </p>
           </div>
         </AnimatedSection>
