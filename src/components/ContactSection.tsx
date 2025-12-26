@@ -46,23 +46,13 @@ const ContactSection: React.FC = () => {
                   <p className="font-medium text-foreground">+91-9453227003</p>
                 </div>
               </a>
-
-              <div className="card-base flex items-center gap-4">
-                <div className="p-3 rounded-lg bg-accent/20 text-accent">
-                  <MapPin size={24} />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="font-medium text-foreground">Banda, Uttar Pradesh, India</p>
-                </div>
-              </div>
             </div>
           </AnimatedSection>
 
           <AnimatedSection animation="slide-right" delay={200}>
             <div className="space-y-6">
               <a
-                href="https://linkedin.com/in/anmolverma"
+                href="https://www.linkedin.com/in/anmol-verma-here/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-base hover-lift flex items-center gap-4 group"
@@ -77,7 +67,7 @@ const ContactSection: React.FC = () => {
               </a>
 
               <a
-                href="https://github.com/anmolverma"
+                href="https://github.com/anonymous312av"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="card-base hover-lift flex items-center gap-4 group"

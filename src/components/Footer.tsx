@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
             © {currentYear} Anmol Verma. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm">
-            Mechanical Engineering | Design & Smart Systems
+            Mechanical Designer
           </p>
         </div>
       </div>

@@ -69,7 +69,7 @@ const HeroSection: React.FC = () => {
               <Mail size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/anmolverma"
+              href="https://linkedin.com/in/anmol-verma-here/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
@@ -78,7 +78,7 @@ const HeroSection: React.FC = () => {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://github.com/anmolverma"
+              href="https://github.com/anonymous312av"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 hover:scale-110"
