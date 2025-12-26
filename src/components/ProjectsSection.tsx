@@ -54,10 +54,12 @@ const projects: Project[] = [
 
 const ProjectsSection: React.FC = () => {
   return (
-    <section id="projects" className="bg-muted/30">
-      <div className="section-container">
+    <section id="projects" className="relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.03] to-transparent pointer-events-none" />
+      
+      <div className="section-container relative z-10">
         <AnimatedSection animation="slide-left">
-          <p className="text-accent font-medium tracking-wide uppercase text-sm mb-2">
+          <p className="text-accent font-medium tracking-widest uppercase text-sm mb-2">
             Portfolio
           </p>
           <h2 className="section-title">Featured Projects</h2>
@@ -73,9 +75,9 @@ const ProjectsSection: React.FC = () => {
               animation={index % 2 === 0 ? 'slide-left' : 'slide-right'}
               delay={index * 100}
             >
-              <div className="project-card h-full flex flex-col">
+              <div className="project-card h-full flex flex-col group">
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="font-semibold text-foreground text-lg pr-4">
+                  <h3 className="font-semibold text-foreground text-lg pr-4 group-hover:text-accent transition-colors">
                     {project.title}
                   </h3>
                   {project.link && (
@@ -94,7 +96,7 @@ const ProjectsSection: React.FC = () => {
                   {project.tools.map((tool) => (
                     <span
                       key={tool}
-                      className="text-xs px-2 py-1 bg-accent/10 text-accent rounded-md font-medium"
+                      className="text-xs px-2.5 py-1 bg-accent/15 text-accent rounded-md font-medium border border-accent/20"
                     >
                       {tool}
                     </span>

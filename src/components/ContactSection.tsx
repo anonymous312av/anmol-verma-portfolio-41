@@ -4,10 +4,12 @@ import { Mail, Linkedin, Github, Phone, Download, MapPin } from 'lucide-react';
 
 const ContactSection: React.FC = () => {
   return (
-    <section id="contact" className="bg-muted/30">
-      <div className="section-container">
+    <section id="contact" className="relative">
+      <div className="absolute inset-0 bg-gradient-to-t from-accent/[0.05] via-transparent to-transparent pointer-events-none" />
+      
+      <div className="section-container relative z-10">
         <AnimatedSection animation="slide-left">
-          <p className="text-accent font-medium tracking-wide uppercase text-sm mb-2">
+          <p className="text-accent font-medium tracking-widest uppercase text-sm mb-2">
             Get in Touch
           </p>
           <h2 className="section-title">Let's Connect</h2>
@@ -23,7 +25,7 @@ const ContactSection: React.FC = () => {
                 href="mailto:anmolvermahere@gmail.com"
                 className="card-base hover-lift flex items-center gap-4 group"
               >
-                <div className="p-3 rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+                <div className="p-3 rounded-lg bg-accent/20 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
                   <Mail size={24} />
                 </div>
                 <div>
@@ -36,7 +38,7 @@ const ContactSection: React.FC = () => {
                 href="tel:+919453227003"
                 className="card-base hover-lift flex items-center gap-4 group"
               >
-                <div className="p-3 rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+                <div className="p-3 rounded-lg bg-accent/20 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
                   <Phone size={24} />
                 </div>
                 <div>
@@ -46,7 +48,7 @@ const ContactSection: React.FC = () => {
               </a>
 
               <div className="card-base flex items-center gap-4">
-                <div className="p-3 rounded-lg bg-accent/10 text-accent">
+                <div className="p-3 rounded-lg bg-accent/20 text-accent">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -65,7 +67,7 @@ const ContactSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="card-base hover-lift flex items-center gap-4 group"
               >
-                <div className="p-3 rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+                <div className="p-3 rounded-lg bg-accent/20 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
                   <Linkedin size={24} />
                 </div>
                 <div>
@@ -80,7 +82,7 @@ const ContactSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="card-base hover-lift flex items-center gap-4 group"
               >
-                <div className="p-3 rounded-lg bg-accent/10 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+                <div className="p-3 rounded-lg bg-accent/20 text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-300">
                   <Github size={24} />
                 </div>
                 <div>
@@ -92,7 +94,7 @@ const ContactSection: React.FC = () => {
               <a
                 href="/resume/Anmol_Verma_Resume.pdf"
                 download="Anmol_Verma_Resume.pdf"
-                className="card-base hover-lift flex items-center gap-4 group border-2 border-accent/20 hover:border-accent/40"
+                className="card-base hover-lift flex items-center gap-4 group border-accent/30 glow"
               >
                 <div className="p-3 rounded-lg bg-accent text-accent-foreground">
                   <Download size={24} />

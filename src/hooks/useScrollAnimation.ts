@@ -3,11 +3,10 @@ import { useEffect, useRef, useState } from 'react';
 interface UseScrollAnimationOptions {
   threshold?: number;
   rootMargin?: string;
-  triggerOnce?: boolean;
 }
 
 export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
-  const { threshold = 0.1, rootMargin = '50px 0px', triggerOnce = false } = options;
+  const { threshold = 0.1, rootMargin = '0px 0px -50px 0px' } = options;
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -15,24 +14,10 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
     const element = ref.current;
     if (!element) return;
 
-    // Check if element is already in viewport on mount
-    const rect = element.getBoundingClientRect();
-    const isInViewport = rect.top < window.innerHeight && rect.bottom > 0;
-    if (isInViewport) {
-      setIsVisible(true);
-      if (triggerOnce) return;
-    }
-
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (triggerOnce) {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(element);
-          }
-        } else {
-          setIsVisible(entry.isIntersecting);
-        }
+        // Update visibility based on intersection - this handles both scroll up and down
+        setIsVisible(entry.isIntersecting);
       },
       { threshold, rootMargin }
     );
@@ -42,7 +27,7 @@ export const useScrollAnimation = (options: UseScrollAnimationOptions = {}) => {
     return () => {
       observer.unobserve(element);
     };
-  }, [threshold, rootMargin, triggerOnce]);
+  }, [threshold, rootMargin]);
 
   return { ref, isVisible };
 };
